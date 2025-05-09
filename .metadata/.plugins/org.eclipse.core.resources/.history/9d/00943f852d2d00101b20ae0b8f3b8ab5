@@ -1,0 +1,13 @@
+package net.fahrschule;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class FahrschuleApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(FahrschuleApplication.class, args);
+	}
+
+}

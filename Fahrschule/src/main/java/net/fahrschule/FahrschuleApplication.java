@@ -8,6 +8,8 @@ public class FahrschuleApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FahrschuleApplication.class, args);
+		
+	
 	}
 
 }

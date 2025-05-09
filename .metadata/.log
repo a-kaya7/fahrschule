@@ -76,3 +76,86 @@ Binding(CTRL+SHIFT+T,
 
 !ENTRY org.eclipse.jst.server.tomcat.core 4 0 2025-05-10 01:18:16.746
 !MESSAGE The server cannot be started because one or more of the ports are invalid. Open the server editor and correct the invalid ports.
+
+!ENTRY org.eclipse.egit.ui 4 0 2025-05-10 01:32:52.346
+!MESSAGE Could not delete file C:\Users\ahmet\git\fahrschule.git\.git\objects\pack\pack-651716bbedd501f074985e977c0e234b499a06f8.pack
+!STACK 0
+java.io.IOException: Could not delete file C:\Users\ahmet\git\fahrschule.git\.git\objects\pack\pack-651716bbedd501f074985e977c0e234b499a06f8.pack
+	at org.eclipse.jgit.util.FileUtils.handleDeleteException(FileUtils.java:233)
+	at org.eclipse.jgit.util.FileUtils.delete(FileUtils.java:226)
+	at org.eclipse.jgit.util.FileUtils.delete(FileUtils.java:167)
+	at org.eclipse.jgit.util.FileUtils.delete(FileUtils.java:169)
+	at org.eclipse.jgit.util.FileUtils.delete(FileUtils.java:169)
+	at org.eclipse.egit.ui.internal.repository.tree.command.RemoveCommand.deleteRepositoryContent(RemoveCommand.java:249)
+	at org.eclipse.egit.ui.internal.repository.tree.command.RemoveCommand$1.runInWorkspace(RemoveCommand.java:176)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.nio.file.FileSystemException: C:\Users\ahmet\git\fahrschule.git\.git\objects\pack\pack-651716bbedd501f074985e977c0e234b499a06f8.pack: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:109)
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1191)
+	at org.eclipse.jgit.util.FileUtils.delete(FileUtils.java:219)
+	... 7 more
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-10 01:41:09.064
+!MESSAGE close() called when useCnt is already zero for Repository[C:\Users\ahmet\git\fahrschule.git\.git]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-10 01:42:39.154
+!MESSAGE close() called when useCnt is already zero for Repository[C:\Users\ahmet\git\fahrschule\.git]
+!SESSION 2025-05-10 01:43:38.286 -----------------------------------------------
+eclipse.buildId=4.35.0.20250306-0811
+java.version=21.0.5
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-05-10 01:43:43.440
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.lemminx.uber-jar 4 0 2025-05-10 01:43:44.084
+!MESSAGE bundle org.eclipse.lemminx.uber-jar:0.29.0 (1006) Component descriptor entry 'OSGI-INF/*.xml' not found
+
+!ENTRY ch.qos.logback.classic 1 0 2025-05-10 01:43:55.536
+!MESSAGE Logback config file: C:\Users\ahmet\Desktop\workspaces\develop\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.0.20241001-1350.xml
+
+!ENTRY org.eclipse.ui 2 0 2025-05-10 01:43:56.421
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-05-10 01:43:56.422
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-05-10 01:43:56.972
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-05-10 01:43:56.972
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.jface 2 0 2025-05-10 01:43:58.102
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-10 01:43:58.102
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm.terminal.connector.local.command.launch"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(pl.szpinda.plugin.tomcat.commands.tomcatStartStop,Tomcat start,stop,
+		,
+		Category(pl.szpinda.plugin.tomcat.commands.category.key,Tomcat keys,null,true),
+		WorkbenchHandlerServiceHandler("pl.szpinda.plugin.tomcat.commands.tomcatStartStop"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-05-10 01:44:07.581
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ahmet'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
